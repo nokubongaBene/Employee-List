@@ -1,0 +1,23 @@
+<h1 style="text-align:center">Employee List</h1>
+
+<h2>Delete Employee</h2>
+
+<ul *ngFor="let employee of employees; index as i">
+        <li (click)= "deleteEmployee(i)">{{employee.id}}. {{employee.name}}-{{employee.age}}</li> 
+</ul>
+
+<h2>Add Employee</h2>
+<input #id id="id" name="id" placeholder="employee Id"/>
+<input #name id="name" name="name" placeholder="employee name"/>
+<input #age id="age" name="age" placeholder="employee age"/>
+<button (click)="saveInfo(id.value, name.value, age.value)">Save</button>
+
+<h2>Update Employee</h2>
+<ul *ngFor="let employee of employees; index as i">
+                <li (click)= "selectEmployee(i)">{{employee.id}}. {{employee.name}}-{{employee.age}}</li> 
+</ul>
+<input [(ngModel)]="empId" placeholder="employee Id"/>
+<input [(ngModel)]="empName"  placeholder="employee name"/>
+<input [(ngModel)]="empAge" placeholder="employee age"/>
+<button (click)="update()">Update</button>
+
