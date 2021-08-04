@@ -7,4 +7,20 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'employee-list-activity';
+  pageStatus = true;
+  Firstname="";
+  userPassword="";
+
+
+  logIn(){
+    console.log(this.Firstname);
+    console.log(this.userPassword);
+    if(this.Firstname == "admin" && this.userPassword == "admin")
+    {
+      this.pageStatus = false;
+    }
+    else{
+      alert("Incorrect password or username");
+    }
+  }
 }
