@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'employee-list-activity';
-  pageStatus = true;
+  pageStatus = false;
   Firstname="";
   userPassword="";
 
